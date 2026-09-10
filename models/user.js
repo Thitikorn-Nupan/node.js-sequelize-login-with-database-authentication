@@ -1,8 +1,8 @@
-import {configAndSequelize} from "../config/config.db.js";
+import {configAndSequelize} from "../config/db.config.js";
 
-const { DataTypes} = configAndSequelize.sequelize
-const getSequelizeConfigDb = configAndSequelize.getSequelizeConfig('register') // for testing to change database name passed argument
-
+const dbConfig = new configAndSequelize.dbConfig ()
+const {DataTypes} = configAndSequelize.sequelize
+const getSequelizeConfigDb = dbConfig.sequelizeConfig('register') // for testing to change database name passed argument
 const User = getSequelizeConfigDb.define (
     'users' , {
         uid : {
@@ -16,14 +16,10 @@ const User = getSequelizeConfigDb.define (
         password : {
             type : DataTypes.STRING,
         },
-    }
-    ,
+    },
     {
-        // freeze name table not using *s on name
-        freezeTableName: true ,
-        // don't use createdAt/update
-        timestamps: false
+        freezeTableName: true , // freeze name table not using *s on name
+        timestamps: false // don't use createdAt/update
     }
 )
-
 export default User

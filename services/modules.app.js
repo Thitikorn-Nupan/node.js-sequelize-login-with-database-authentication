@@ -1,7 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import bcrypt from 'bcrypt'
-export const serviceModulesApp = {
+
+export const modulesApp = {
     express : express,
     app : express() ,
     router : express.Router() ,

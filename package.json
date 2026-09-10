@@ -4,9 +4,23 @@
   "description": "",
   "type": "module",
   "main": "index.js",
+  "//": {
+    "1": "node <file to run>",
+    "2": "npm start (you have to set it on scripts key)",
+    "Way to run": "2",
+    "run before use jest unit test": " npm install --save-dev jest@29 --legacy-peer-deps &&&  npm install --save-dev @babel/preset-react --legacy-peer-deps",
+    "fix error Jest encountered an unexpected token ": ", by add jest.config.js",
+    "fix error can't use import on jest test on type module" : [
+      "node --experimental-vm-modules ./node_modules/jest/bin/jest.js runs Jest through Node with native ESM support",
+      "node starts the Node.js runtime.",
+      "--experimental-vm-modules enables Node’s VM modules feature, which Jest 29 needs to execute ES modules such as files using.",
+      "./node_modules/jest/bin/jest.js directly runs the Jest executable installed locally in your project"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node testing.js"
+    "start": "node runner.js",
+    "start:config": "node config/db.config.js"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +34,8 @@
     "process": "^0.11.10",
     "sequelize": "^6.35.2",
     "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
