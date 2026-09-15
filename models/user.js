@@ -1,6 +1,6 @@
 import {configAndSequelize} from "../config/db.config.js";
 
-const dbConfig = new configAndSequelize.dbConfig ()
+const dbConfig = new configAndSequelize.dbConfig()
 const {DataTypes} = configAndSequelize.sequelize
 const getSequelizeConfigDb = dbConfig.sequelizeConfig('register') // for testing to change database name passed argument
 const User = getSequelizeConfigDb.define (

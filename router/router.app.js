@@ -1,6 +1,12 @@
-import LogApp from "../log/log.app.js";
 import CrudApp from "../services/crud.app.js";
 import {modulesApp} from "../services/modules.app.js";
+import path from "path";
+import {fileURLToPath} from 'url';
+import {createLogger} from "../log/log.appv2.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const filename = path.basename(__filename);
+const logger = createLogger(filename);
 
 const crudApp = new CrudApp()
 const bodyParser = modulesApp.bodyParser
@@ -37,7 +43,7 @@ routerUser.post('/login' , async (req,res) => {
                 })
             }
         }).catch( (e) => {
-            LogApp.winstonLogging.warn(`cause from login(username,password) method async : ${e.message}`)
+            logger.warn(`cause from login(username,password) method async : ${e.message}`)
             throw e
         })
 
@@ -68,7 +74,7 @@ routerUser.post('/create' , async (req,res) => {
             }
 
         }).catch( (e) => {
-            LogApp.winstonLogging.warn(`cause from createUser(username,password) method async : ${e.message}`)
+            logger.warn(`cause from createUser(username,password) method async : ${e.message}`)
             throw e
         })
     } catch (e) {
@@ -87,7 +93,7 @@ routerBook.get('/reads' , async (req,res) => {
         const {username , password} = req.body
         await crudApp.loginThenGetsBooks(username,password).then((result) => {
             if (typeof result === "string") { // check the result type
-                LogApp.winstonLogging.info('result is type string')
+                logger.info('result is type string')
                 if (result.localeCompare('password user hasn\'t matched') === 0) {
                     return res.status(401).json({
                         status: "unauthorized",
@@ -101,14 +107,14 @@ routerBook.get('/reads' , async (req,res) => {
                     })
                 }
             } else {
-                LogApp.winstonLogging.info('result is not type string')
+                logger.info('result is not type string')
                 return res.status(200).json({
                     status: "ok",
                     data: result
                 })
             }
         }).catch( (e) => {
-            LogApp.winstonLogging.warn(`cause from loginThenReadsBooks(username,password) method async : ${e.message}`)
+            logger.warn(`cause from loginThenReadsBooks(username,password) method async : ${e.message}`)
             throw e
         })
     } catch (e) {

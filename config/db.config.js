@@ -1,13 +1,18 @@
-import LogApp from "../log/log.app.js";
-import path from "path";
 import dotenv from 'dotenv'
 import sequelize from 'sequelize'
+import path from "path";
+import {fileURLToPath} from 'url';
+import {createLogger} from "../log/log.appv2.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const filename = path.basename(__filename);
+const logger = createLogger(filename);
 
 class DbConfig {
     constructor() {
         //** config the environment file
         dotenv.config({ path : path.resolve('./env/.env'),debug:true })
-        LogApp.winstonLogging.info('DbConfig\'s constructor is worked')
+        logger.info('DbConfig\'s constructor is worked')
     }
     sequelizeConfig(database) {
         return new sequelize(
@@ -33,9 +38,9 @@ class DbConfig {
 /**
 check to config. it was gonna good or bad
 new DbConfig().sequelizeConfig("register").authenticate().then(() => {
-    LogApp.winstonLogging.info('connected successfully!!')
+    logger.info('connected successfully!!')
 }).catch((error) => {
-    LogApp.winstonLogging.debug('failed connect!!')
+    logger.debug('failed connect!!')
     throw error
 })
 */

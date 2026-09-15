@@ -47,15 +47,14 @@ commonJest.unstable_mockModule('../models/book.js', () => ({
     },
 }));
 
-commonJest.unstable_mockModule('../log/log.app.js', () => ({
-    // Silence application logging and prevent the real Winston logger from running.
-    default: {
-        winstonLogging: {
-            info: commonJest.fn(),
-            warn: commonJest.fn(),
-            debug: commonJest.fn(),
-        },
-    },
+commonJest.unstable_mockModule('../log/log.appv2.js', () => ({
+    // Match the named createLogger export used by crud.app.js.
+    // name must mapped => export function createLogger(filename) {} as your real function
+    createLogger: commonJest.fn(() => ({
+        info: commonJest.fn(),
+        warn: commonJest.fn(),
+        debug: commonJest.fn(),
+    })),
 }));
 
 // Import CrudApp after registering mocks so its dependencies resolve to these mocks.

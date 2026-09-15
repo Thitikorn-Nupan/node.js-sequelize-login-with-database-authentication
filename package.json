@@ -18,7 +18,8 @@
     ]
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "test:crudapp": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js test/crud-app.test.js",
     "start": "node runner.js",
     "start:config": "node config/db.config.js"
   },

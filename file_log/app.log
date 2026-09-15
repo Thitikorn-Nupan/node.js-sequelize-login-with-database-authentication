@@ -1,0 +1,72 @@
+2026-09-15 12:40:25 info: [db.config.js] DbConfig's constructor is worked
+2026-09-15 12:40:26 info: [db.config.js] connected successfully!!
+2026-09-15 12:43:36 info: [db.config.js] DbConfig's constructor is worked
+2026-09-15 12:43:36 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:43:36 info: [runner.js] you are on port 3000
+2026-09-15 12:43:36 info: [db.config.js] DbConfig's constructor is worked
+2026-09-15 12:44:59 info: [crud.app.js] 
+hashed password : $2a$10$g/c1EVkTJcZednUA/jGu8uHTxeVHlebb2KBTJkf7R9X8VyIxB6ERC
+password : 12345
+2026-09-15 12:44:59 info: [crud.app.js] check : true
+2026-09-15 12:44:59 info: [crud.app.js] password user has matched
+2026-09-15 12:45:22 debug: [crud.app.js] user hasn't exited
+2026-09-15 12:46:09 info: [crud.app.js] 
+hashed password : $2b$10$uLsKOX7/4QyCmt2qLD7XeemZS..RYaAVAB1WEvvFaEnWpHL6kMsPC
+password : 12345
+2026-09-15 12:46:09 info: [crud.app.js] check : true
+2026-09-15 12:46:09 info: [crud.app.js] password user has matched
+2026-09-15 12:46:33 info: [crud.app.js] password user has matched
+2026-09-15 12:46:33 info: [router.app.js] result is not type string
+2026-09-15 12:46:37 info: [crud.app.js] password user has matched
+2026-09-15 12:46:37 info: [router.app.js] result is not type string
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 info: [crud.app.js] 
+hashed password : hashed-password
+password : password
+2026-09-15 12:47:40 info: [crud.app.js] check : true
+2026-09-15 12:47:40 info: [crud.app.js] password user has matched
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 info: [crud.app.js] 
+hashed password : hashed-password
+password : wrong-password
+2026-09-15 12:47:40 info: [crud.app.js] check : false
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 debug: [crud.app.js] user hasn't exited
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 info: [crud.app.js] this is password password then I hashed it hashed-password
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 info: [crud.app.js] this is password password then I hashed it hashed-password
+2026-09-15 12:47:40 debug: [crud.app.js] somethings was wrong : database error
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 info: [crud.app.js] password user has matched
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:47:40 debug: [crud.app.js] user hasn't exited
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 info: [crud.app.js] 
+hashed password : hashed-password
+password : password
+2026-09-15 12:48:23 info: [crud.app.js] check : true
+2026-09-15 12:48:23 info: [crud.app.js] password user has matched
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 info: [crud.app.js] 
+hashed password : hashed-password
+password : wrong-password
+2026-09-15 12:48:23 info: [crud.app.js] check : false
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 debug: [crud.app.js] user hasn't exited
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 info: [crud.app.js] this is password password then I hashed it hashed-password
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 info: [crud.app.js] this is password password then I hashed it hashed-password
+2026-09-15 12:48:23 debug: [crud.app.js] somethings was wrong : database error
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 info: [crud.app.js] password user has matched
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:48:23 debug: [crud.app.js] user hasn't exited
+2026-09-15 12:51:21 info: [crud.app.js] CrudApp's constructor is worked
+2026-09-15 12:51:21 info: [crud.app.js] 
+hashed password : hashed-password
+password : wrong-password
+2026-09-15 12:51:21 info: [crud.app.js] check : false
